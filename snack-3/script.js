@@ -10,23 +10,14 @@ firstDiv.style.color = "red";
 secondDiv.style.color = "green";
 
 // Partendo da un array di numeri, stampiamo nell’id rosso i numeri dispari e in verde i numeri pari.
-
 const array = [10,21,12,34,77,22,175,93,43];
-
-const arrayPari = [];
-const arrayDispari = [];
-
+ 
 for (let i = 0; i < array.length; i++){
     console.log(array[i])
     if(array[i] % 2 == 0){
-        arrayPari.push(array[i]);
+        firstDiv.innerHTML += ` ${array[i]} `
     }else{
-        arrayDispari.push(array[i]);
+        secondDiv.innerHTML += ` ${array[i]} `
     }
 }
 
-console.log(arrayPari)
-console.log(arrayDispari)
-
-firstDiv.append(arrayPari)
-secondDiv.append(arrayDispari)
